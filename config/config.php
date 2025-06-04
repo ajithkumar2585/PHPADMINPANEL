@@ -2,7 +2,7 @@
 
 try {
 // Host
-define("HOST" ,"localhost");
+define("HOST" ,"127.0.0.1");
 
 //DBNAME
 define("DBNAME" ,"DB_FORUM");
@@ -11,16 +11,16 @@ define("DBNAME" ,"DB_FORUM");
 define("USER", "root");
 
 //PASSWORD
-define("PASS", "123");
+define("PASS", "Ikmlap@311");
 
-$conn = new PDO("mysql:host=".HOST." ; dbname=".DBNAME."",USER,PASS);
+$conn = new PDO("mysql:host=".HOST.";dbname=".DBNAME."",USER,PASS);
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-if ($conn == true){
+/*if ($conn == true){
     echo "database connection successful";
 }else {
     echo "error";
-}
+}*/
 
 }catch(PDOException $Exception ) {
     echo $Exception->getMessage();
