@@ -1,4 +1,8 @@
+<?php
 
+   define ("APPURL","http://phpadminpanel.com/");
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -9,9 +13,9 @@
     <title>Welcome To Forum</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="<?php echo APPURL; ?>/css/bootstrap.css" rel="stylesheet">
     <!-- Custom styles for this template -->
-    <link href="css/custom.css" rel="stylesheet">
+    <link href="<?php echo APPURL; ?>/css/custom.css" rel="stylesheet">
   </head>
 
   <body>
