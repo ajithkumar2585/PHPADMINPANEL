@@ -1,3 +1,5 @@
+<?php require "includes/header.php;" ?>
+
 <div class="container">
 		<div class="row">
 			<div class="col-md-8">
@@ -64,3 +66,7 @@
 			</div>
 		</div>
     </div><!-- /.container -->
+
+
+
+	<?php require "includes/footer.php;" ?>

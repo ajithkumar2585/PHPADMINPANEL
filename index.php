@@ -1,4 +1,4 @@
-<?php require "includes/header.php;" ?>
+<?php require ('includes/header.php;') ?>
 
     <div class="container">
 		<div class="row">
@@ -95,7 +95,7 @@
 					</div>
 				</div>
 			</div>
-<?php require "includes/footer.php;" ?>
+<?php require '(includes/footer.php;)' ?>
 			
 					
 					
