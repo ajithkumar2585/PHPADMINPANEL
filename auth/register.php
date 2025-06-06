@@ -1,4 +1,47 @@
 <?php require "../includes/header.php"; ?>
+<?php require "../config/config.php"; ?>
+
+<?php
+
+
+     if(isset($_POST['submit'])) {
+           
+		if(empty($_POST['name'])  OR empty($_POST['email']) OR empty($_POST['email']) 
+		  OR empty($_POST['password']) empty($_POST['about'])) {
+		      echo "<script>alert('one or more fields are empty');</script>";
+		}else {
+			    
+			   $name = $_POST['name'];
+			   $email = $_POST['email'];
+			   $email = $_POST['email'];
+			   $password = hash_password($_POST['password'], PASSWORD_DEFAULT);
+			   $about = $_POST['about'];
+			   $avatar = $_FILES['avatar']['name'];
+
+			   $dir = "img/" . basename($avatar);
+
+			   $insert = $conn->prepare("INSER INTO users (name, email, username, password,
+			   about, avatar) VALUES(:name, :email, :username, :password, :about, ; avatar)");
+
+
+              $insert->execute([
+				":name" => $name,
+				":email" => $email,
+				":username" => $username,
+				":password" => $password,
+				":about" => $about,
+				":avatar" => $avatar,
+
+			  ]);
+
+			  header("location: ")
+
+		}
+
+	 }
+
+
+?>
 
 <div class="container">
 		<div class="row">
@@ -41,7 +84,7 @@
 					<textarea id="about" rows="6" cols="80" class="form-control"
 					name="about" placeholder="Tell us about yourself (Optional)"></textarea>
 			</div>
-			<input name="register" type="submit" class="color btn btn-default" value="Register" />
+			<input name="submit" type="submit" class="color btn btn-default" value="Register" />
 </form>
 					</div>
 				</div>
